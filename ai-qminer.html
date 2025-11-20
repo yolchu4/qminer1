@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>شرکت علم و صنعت معدن آوادان | هوش مصنوعی صنعتی</title>
+  <meta name="description" content="دستیار هوش مصنوعی مهندسین فرآیندهای معدنی و صنعتی — پیشرو در آموزش و خدمات هوش مصنوعی در ایران">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Google Fonts — Vazirmatn (Modern Persian Font) -->
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="logo-filip.css"/>
+
+  <script>
+    // Mobile menu toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuButton.querySelector('.hamburger').classList.toggle('active');
+      });
+
+      // Close mobile menu on resize > 768px
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          mobileMenuButton.querySelector('.hamburger').classList.remove('active');
+        }
+      });
+    });
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 overflow-x-hidden">
+  <!-- Header / Navigation -->
+  <header class="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2 space-x-reverse">
+        <div class="bg-gradient-to-r from-cyan-500 to-blue-600 w-20 h-20 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-xl">AVADAN</span>
+        </div>
+        <span class="text-white text-xl font-bold"></span>
+      </div>
+
+<div class="logo-container">
+    <div class="logo-flip">
+        <div class="logo-front">
+            <img src="img/logo1.jpg" class="logo" alt="AVADAN.CO ">
+            <div class="logo-text"></div>
+        </div>
+        <div class="logo-back">
+            <img src="img/m3.jpg" class="logo" alt="AVADAN.CO ">
+            <div class="logo-text"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex space-x-8 space-x-reverse">
+        <a href="#home" class="text-gray-300 hover:text-cyan-400 transition">خانه</a>
+        <a href="#services" class="text-gray-300 hover:text-cyan-400 transition">خدمات</a>
+        <a href="#about" class="text-gray-300 hover:text-cyan-400 transition">درباره ما</a>
+        <a href="#activities" class="text-gray-300 hover:text-cyan-400 transition">فعالیت‌ها</a>
+        <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition">تماس</a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+        <div class="hamburger">
+          <span>.</span>
+          <span></span>
+          <span></span>
+        </div>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 py-4 px-4 space-y-3">
+      <a href="#home" class="block text-gray-300 hover:text-cyan-400">خانه</a>
+      <a href="#services" class="block text-gray-300 hover:text-cyan-400">خدمات</a>
+      <a href="#about" class="block text-gray-300 hover:text-cyan-400">درباره ما</a>
+      <a href="#activities" class="block text-gray-300 hover:text-cyan-400">فعالیت‌ها</a>
+      <a href="#contact" class="block text-gray-300 hover:text-cyan-400">تماس</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="gradient-bg text-white pt-28 pb-20 px-4">
+    <div class="container mx-auto max-w-6xl text-center">
+      <h1 class="text-3xl md:text-5xl font-bold mb-6 animate__animated animate__fadeInDown">
+        <span class="block">اپلیکیشن هوش مصنوعی</span>
+        <span class="ai-gradient block mt-2">دستیار مهندسین فرآیندهای معدنی و صنعتی</span>
+      </h1>
+      <p class="text-gray-300 text-lg md:text-xl max-w-4xl mx-auto mb-10 animate__animated animate__fadeInUp">
+        دستیار هوش مصنوعی در قالب اپلیکیشن موبایل یا سایت متصل به سرور، با دریافت پارامترهای فعلی خط تولید، 
+        سایر پارامترهای بهینه را به‌صورت آنلاین و هوشمند پیشنهاد می‌دهد.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4 animate__animated animate__fadeInUp animate__delay-1s">
+        <a href="https://avadan-co.ir/qminer3/" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition transform hover:scale-105">
+          مشاهده مدل هوش مصنوعی صنعت یار
+        </a>
+        <a  href="form.html" class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-lg backdrop-blur-sm transition">
+          درخواست مشاوره
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smart Assistant Benefits -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
+          دستیار هوشمند و مزایای <span class="ai-gradient">تحول‌آفرین</span>
+        </h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-100 shadow-sm">
+          <div class="flex items-start mb-4">
+            <div class="bg-cyan-100 p-3 rounded-lg text-cyan-700 mr-4">
+              <i class="fas fa-book-open text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">یادداشت‌های روزانه و داده‌های آزمایشگاهی</h3>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">
+            در عصر اطلاعات، داده‌های کنترل کیفی و یادداشت‌های روزانه (دما، فشار، غلظت، حجم و کامنت اپراتورها) 
+            به مثابه «خاک معدنی» ارزشمندی هستند که مادهٔ باارزش آن «اطلاعات» است.
+          </p>
+        </div>
+
+        <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-100 shadow-sm">
+          <div class="flex items-start mb-4">
+            <div class="bg-purple-100 p-3 rounded-lg text-purple-700 mr-4">
+              <i class="fas fa-brain text-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-800">استخراج اطلاعات با یادگیری عمیق</h3>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">
+            با پیشرفت الگوریتم‌های هوش مصنوعی (Deep Learning)، امکان استخراج روابط پنهان بین پارامترهای وابسته و 
+            کشف الگوهای نهفته در داده‌ها فراهم شده است — حتی در مواردی که برای انسان غیرممکن به نظر می‌رسد.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">شرکت <span class="ai-gradient">آوادان</span> — پیشرو در هوش مصنوعی</h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-pink-500 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-gray-800/50 p-8 rounded-2xl backdrop-blur-sm border border-gray-700">
+        <p class="text-lg text-gray-300 leading-relaxed mb-6">
+          تیم ما مفتخر است که از جمله اولین گروه‌های پیشرو در کشور باشد که بهره‌گیری از به‌روزترین الگوریتم‌های یادگیری ماشین و هوش مصنوعی را فرا گرفته و در زمینه‌های زیر فعالیت می‌کند:
+        </p>
+        <ul class="space-y-3 pr-4 text-right text-gray-200">
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-cyan-400 mt-1 ml-2 flex-shrink-0"></i>
+            <span>کنترل هوشمند و عملی فرآیندهای معدنی، شیمیایی و صنعتی</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-cyan-400 mt-1 ml-2 flex-shrink-0"></i>
+            <span>مدیریت بهینه خطوط تولید با استفاده از داده‌های تاریخی</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle text-cyan-400 mt-1 ml-2 flex-shrink-0"></i>
+            <span>آموزش، راه‌اندازی و ارائه خدمات هوش مصنوعی برای صنایع وادارات و موسسات آموزشی</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">محصولات و <span class="ai-gradient">خدمات</span></h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          طراحی و پیاده‌سازی راهکارهای هوشمند بر اساس نیازهای خاص هر خط تولید
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="service-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center text-white mb-5">
+            <i class="fas fa-graduation-cap text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">دوره‌های آموزشی هوش مصنوعی</h3>
+          <p class="text-gray-600">
+            برگزاری دوره‌های تخصصی یادگیری عمیق، شبکه‌های عصبی و کاربردهای صنعتی هوش مصنوعی
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white mb-5">
+            <i class="fas fa-robot text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3"><a href="https://avadan-co.ir/qminer3/" class="text-gray-800 hover:text-cyan-600 transition">مدل دستیار هوش مصنوعی</a></h3>
+          <p class="text-gray-600">
+            طراحی مدل‌های سفارشی‌سازی‌شده بر اساس آرشیو داده‌های آزمایشگاهی و کنترل کیفی هر خط تولید
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-500 flex items-center justify-center text-white mb-5">
+            <i class="fas fa-microscope text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">سنسور اپتیکی هوشمند</h3>
+          <p class="text-gray-600">
+            طراحی سنسور اپتیکی مبتنی بر هوش مصنوعی برای ثبت جابجایی در مقیاس میکرومتری
+          </p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center text-white mb-5">
+            <i class="fas fa-industry text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">دستگاه تست مقاومت مواد</h3>
+          <p class="text-gray-600">
+            ساخت دستگاه تست مقاومت بتن و فولاد با سنسور اپتیکی هوشمند در آزمایشگاه مقاومت مصالح
+          </p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card bg-white p-6 rounded-2xl shadow-md border border-gray-100 transition-all duration-300">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center text-white mb-5">
+            <i class="fas fa-laser text-xl"></i>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">نرم‌افزار استخراج فاز لیزری</h3>
+          <p class="text-gray-600">
+            بسته نرم‌افزاری برای استخراج فاز از الگوهای تداخلی لیزر به‌منظور تصویربرداری میکرونی و صنعتی
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Activities & Team -->
+  <section id="activities" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">فعالیت‌ها و <span class="ai-gradient">تیم متخصص</span></h2>
+        <div class="w-24 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <!-- Activities -->
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">بخشی از فعالیت‌های شرکت</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start">
+              <span class="bg-cyan-100 text-cyan-800 rounded-full w-8 h-8 flex items-center justify-center ml-3 flex-shrink-0">1</span>
+              <p>برگزاری دوره‌های آموزشی هوش مصنوعی و یادگیری عمیق ماشین</p>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-cyan-100 text-cyan-800 rounded-full w-8 h-8 flex items-center justify-center ml-3 flex-shrink-0">2</span>
+              <p>طراحی مدل دستیار هوش مصنوعی مختص هر فرآیند تولیدی</p>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-cyan-100 text-cyan-800 rounded-full w-8 h-8 flex items-center justify-center ml-3 flex-shrink-0">3</span>
+              <p>طراحی سنسور اپتیکی با دقت میکرومتری</p>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-cyan-100 text-cyan-800 rounded-full w-8 h-8 flex items-center justify-center ml-3 flex-shrink-0">4</span>
+              <p>ساخت دستگاه تست مقاومت مواد با سنسور هوشمند</p>
+            </li>
+            <li class="flex items-start">
+              <span class="bg-cyan-100 text-cyan-800 rounded-full w-8 h-8 flex items-center justify-center ml-3 flex-shrink-0">5</span>
+              <p>طراحی نرم‌افزار استخراج فاز از الگوهای لیزری با روش یادگیری عمیق ماشین</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Team -->
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-6">تیم تخصصی آوادان</h3>
+          <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              تیم هوش مصنوعی شرکت آوادان شامل فارغ‌التحصیلان و دانشجویان دکتری دانشگاه‌های 
+              <span class="font-semibold">تحصیلات تکمیلی علوم پایه زنجان</span> و 
+              <span class="font-semibold">تربيت مدرس تهران</span> است.
+            </p>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li>✓ ۲۵ سال سابقه در پروژه‌های صنایع سرب و روی و پتروشیمی</li>
+              <li>✓ ۲۰ سال سابقه در تولید و تدریس نرم‌افزارهای تخصصی مهندسی</li>
+              <li>✓ ۷ سال تحقیق و توسعه در حوزه هوش مصنوعی و یادگیری عمیق ماشین</li>
+            </ul>
+            <div class="mt-6 pt-4 border-t border-gray-200">
+              <p class="text-gray-800 font-medium">
+                <i class="fas fa-lightbulb text-yellow-500 ml-2"></i>
+                انتقال «فوت کوزه‌گری» خط تولید به نسل آینده با الگوریتم‌های یادگیری عمیق
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 gradient-bg text-white">
+    <div class="container mx-auto px-4 text-center max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        هوشمندسازی فرآیندهای صنعتی دیگر یک گزینه لوکس نیست!
+      </h2>
+      <p class="text-xl text-gray-200 mb-8">
+        پیاده‌سازی جامع هوش مصنوعی — شامل تحلیل داده، دستیار هوشمند و بهینه‌سازی مصرف مواد اولیه و انرژی — مزایای تحول‌آفرینی به ارمغان می‌آورد.
+      </p>
+      <p class="text-lg text-gray-300 mb-10">
+        سفر به سوی صنعت هوشمند با یک قدم کوچک و متمرکز شروع می‌شود. امروز با ما همراه شوید.
+      </p>
+      <a href="#contact" class="inline-block bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white font-bold py-4 px-10 rounded-xl shadow-lg transition transform hover:scale-105">
+        <i class="fas fa-paper-plane ml-2"></i>
+        شروع همکاری
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">فرم درخواست مشاوره و همکاری</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">
+          لطفاً اطلاعات خود را وارد کنید تا با شما تماس بگیریم.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
+        <!-- Form -->
+        <div class="bg-gray-50 p-8 rounded-2xl shadow-sm">
+          <form id="contact-form">
+            <div class="mb-5">
+              <label for="name" class="block text-gray-700 mb-2 font-medium">نام و نام خانوادگی</label>
+              <input type="text" id="name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent" required>
+            </div>
+            <div class="mb-5">
+              <label for="email" class="block text-gray-700 mb-2 font-medium">ایمیل یا شماره تماس</label>
+              <input type="text" id="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent" required>
+            </div>
+            <div class="mb-5">
+              <label for="company" class="block text-gray-700 mb-2 font-medium">شرکت / سازمان</label>
+              <input type="text" id="company" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
+            </div>
+            <div class="mb-5">
+              <label for="message" class="block text-gray-700 mb-2 font-medium">شرح نیاز یا سوال</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-cyan-500 focus:border-transparent" placeholder="لطفاً نیاز خود را توضیح دهید..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-bold py-3 px-6 rounded-lg shadow-md transition">
+              <i class="fas fa-paper-plane ml-2"></i>
+              ارسال درخواست
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <div class="bg-gradient-to-br from-blue-600 to-indigo-700 text-white p-8 rounded-2xl">
+            <h3 class="text-2xl font-bold mb-6">راه‌های ارتباطی</h3>
+            <ul class="space-y-5">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-xl ml-3 mt-1"></i>
+                <span>زنجان، دانشگاه تحصیلات تکمیلی علوم پایه</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-phone-alt text-xl ml-3 mt-1"></i>
+                <span> پس از ارسال فرم تماس می‌گیریم</span>
+                 </li>
+              <li class="flex items-start">
+                 <span>📞09123411691</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-envelope text-xl ml-3 mt-1"></i>
+                <span>info@avadan-co.ir</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="mt-8">
+           
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-10">
+    <div class="container mx-auto px-4 text-center">
+      <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+        <div class="flex items-center space-x-2 space-x-reverse mb-4 md:mb-0">
+          <div class="bg-gradient-to-r from-cyan-500 to-blue-600 w-20 h-20 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">AVADAN</span>
+          </div>
+          <span class="text-white text-xl font-bold">آوادان</span>
+        </div>
+        <div class="flex space-x-6 space-x-reverse">
+          <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-telegram-plane"></i></a>
+          <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6">
+        <p>&copy; 1404 شرکت علم و صنعت معدن آوادان. کلیه حقوق محفوظ است.</p>
+       
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chat Bot Widget -->
+  <div class="chatbot-container">
+    <button class="chatbot-button" id="chatbot-toggle" aria-label="باز کردن چت" >
+      <span>
+      <!--img src="img/logo1.jpg" class="chatbot-logo" alt="AVADAN.CO "-->
+      </span>
+      <i class="fas fa-comments"> ؟؟</i>
+      <span class="notification-badge" id="chatbot-notification" style="display:block">1</span>
+    </button>
+    
+    <div class="chatbot-window" id="chatbot-window">
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <div class="1chatbot-avatar">
+            <img    w=20 h=20 src="img/logo1.jpg" class="chatbot-logo" alt="logo "> 
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="chatbot-header-text">
+            <h3>پشتیبانی آوادان</h3>
+            <div class="chatbot-status">
+              <span class="chatbot-status-dot"></span>
+              <span>آنلاین</span>
+        
+               
+            </div>
+          </div>
+        </div>
+        <button class="chatbot-close" id="chatbot-close" aria-label="بستن چت">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div class="chatbot-messages" id="chatbot-messages">
+        <!-- Messages will be added here dynamically -->
+      </div>
+      
+      <div class="chatbot-input-area">
+        <input 
+          type="text" 
+          class="chatbot-input" 
+          id="chatbot-input" 
+          placeholder="پیام خود را بنویسید..."
+          aria-label="ورودی پیام"
+        />
+        <button class="chatbot-send" id="chatbot-send" aria-label="ارسال پیام">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+<script  src="chatbot.js"></script>
+
+  <!-- Simple form submission handler (prevent default & alert) -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      alert(`✅ درخواست شما با موفقیت ثبت شد، جناب/سرکار ${name}!\n\nدر اسرع وقت با شما تماس خواهیم گرفت.`);
+      this.reset();
+    });
+  </script>
+
+  
+
+<!--
+<script>
+  // تابع برای اضافه کردن افکت محو و بازگشت
+  function addFadeEffect(cardId) {
+    const card = document.getElementById(cardId);
+    if (!card) return;
+
+    // در موبایل هم کار کند: click + touchstart
+    ['click', 'touchstart'].forEach(evt => {
+      card.addEventListener(evt, () => {
+        // اگر هم‌اکنون fade-out است، کاری نکند
+        if (card.classList.contains('fade-out')) return;
+
+        // محو شدن
+        card.classList.add('fade-out');
+
+        // بعد از ۵ ثانیه بازگرداندن
+        setTimeout(() => {
+          card.classList.remove('fade-out');
+          card.classList.add('fade-in');
+
+          // حذف fade-in بعد از تمام شدن انیمیشن
+          setTimeout(() => card.classList.remove('fade-in'), 1000);
+        }, 5000);
+      });
+    });
+  }
+
+  // فعال‌سازی روی هر دو کارت
+  addFadeEffect('card1');
+  addFadeEffect('infoCard');
+</script>
+
+-->
+
+</body>
+</html>
+

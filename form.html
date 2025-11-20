@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شرکت توسعه علم و صنعت  و معدن آوادان </title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #00b4d8, #48cae4);
+      color: #fff;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.2);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      padding: 0;
+      margin: 0;
+    }
+    nav ul li {
+      cursor: pointer;
+    }
+    .lang-switch {
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+    }
+    main {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    section#form-section {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      margin: 3rem 2rem;
+      border-radius: 15px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input, button {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    input {
+      outline: none;
+    }
+    button {
+      background: #0077b6;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #023e8a;
+    }
+    .message {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+	
+  </style>
+</head>
+<body>
+  <header>
+ 
+  
+  
+  
+  <nav>
+  <ul id="menu">
+    <li data-key="about"><a href="#about">About Us</a></li>
+   <li data-key="services"><a href='./index.html' >Services</a></li>
+    <li data-key="products"><a href="#products">Products</a></li>
+    <li data-key="cooperation"><a href="#cooperation">Cooperation</a></li>
+    <li data-key="contact"><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+    <select class="lang-switch" id="language">
+      <option value="fa">FA</option>
+      <option value="en">EN</option>
+      <option value="tr">TR</option>
+    </select>
+  </header>
+
+  <main>
+    <h1 id="title">شرکت توسعه علم وصنعت و معدن آوادان</h1>
+    <p id="subtitle">🌈راهکارهای مدرن مبتنی بر هوش مصنوعی🌈</p>
+	 <p id="tel"> 📱📞+98-912-341-1691📞📱</p>
+  </main>
+  
+  <section>
+  <button id="backButton">🏠 HOME🏠</button><script>document.getElementById('backButton').addEventListener('click', () => {window.location.href = './index.html';});</script>
+
+<style>
+#backButton {
+  background: linear-gradient(to right, #00b4d8, #0096c7);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin: 30px auto;
+  display: block;
+}
+
+#backButton:hover {
+  background: linear-gradient(to right, #0096c7, #023e8a);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+</style>
+  <form id="requestForm" action="submit-form.php" method="POST">
+  <h2 id="form-title">فرم درخواست همکاری و مشاوره</h2>
+  <form id="requestForm" novalidate>
+    <div class="form-group">
+      <label for="name">نام</label>
+      <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید" required />
+    </div>
+
+    <div class="form-group">
+      <label for="phone">تلفن</label>
+      <input type="tel" id="phone" name="phone" placeholder="شماره تلفن همراه (مثال: 09123456789)" required />
+    </div>
+
+    <div class="form-group">
+      <label for="company">نام شرکت</label>
+      <input type="text" id="company" name="company" placeholder="نام شرکت یا سازمان" required />
+    </div>
+
+    <button type="submit" id="submitBtn">ارسال درخواست</button>
+    <div class="message" id="formMessage" role="alert" aria-live="polite"></div>
+  </form>
+</section>
+  
+<!--section>
+ <form id="requestForm" action="submit-form.php" method="POST">
+    <h2 id="form-title">فرم درخواست همکاری و  مشاوره </h2>
+    <form id="requestForm">
+      <input type="text" id="name" name="name" placeholder="نام" required />
+      <input type="text" id="phone" name="phone" placeholder="تلفن" required />
+      <input type="text" id="company" name="company" placeholder="نام شرکت" required />
+      <button type="submit" id="submitBtn">ارسال درخواست</button>
+      <div class="message" id="formMessage"></div>
+    </form>
+  </section-->
+
+  <script>
+    const translations = {
+      fa: {
+        about: "درباره ما",
+        services: "خدمات",
+        products: "محصولات",
+        cooperation: "همکاری",
+        contact: "تماس با ما",
+        title: "شرکت علم و صنعت و معدن اوادان",
+        subtitle: "راهکارهای مدرن مبتنی بر هوش مصنوعی",
+		tel:"9123411691",
+        formTitle: "فرم درخواست همکاری ",
+        placeholders: { name: "نام", phone: "تلفن", company: "نام شرکت" },
+        submit: "ارسال درخواست",
+        success: "درخواست شما با موفقیت ارسال شد.",
+        error: "خطا در ارسال. لطفا دوباره تلاش کنید."
+      },
+      en: {
+        about: "About",
+        services: "Services",
+        products: "Products",
+        cooperation: "Cooperation",
+        contact: "Contact",
+        title: "AI Services Company for Industry",
+		tel:"+98-9123-341-1691",
+        subtitle: "Modern AI-based Solutions",
+        formTitle: "Request Collaboration & Demo",
+        placeholders: { name: "Name", phone: "Phone", company: "Company" },
+        submit: "Submit Request",
+        success: "Your request has been sent successfully.",
+        error: "Error sending request. Please try again."
+      },
+      tr: {
+        about: "Hakkımızda",
+        services: "Hizmetler",
+        products: "Ürünler",
+        cooperation: "İşbirliği",
+        contact: "İletişim",
+        title: "Endüstri için Yapay Zekâ Hizmetleri",
+		tel:"+98-9123-341-1691",
+        subtitle: "Modern yapay zekâ tabanlı çözümler",
+        formTitle: "İşbirliği ve Demo Talep Formu",
+        placeholders: { name: "Ad", phone: "Telefon", company: "Şirket Adı" },
+        submit: "Talep Gönder",
+        success: "Talebiniz başarıyla gönderildi.",
+        error: "Gönderimde hata. Lütfen tekrar deneyin."
+      }
+    };
+
+    const langSelect = document.getElementById("language");
+    const menuItems = document.querySelectorAll("#menu li");
+
+    function setLanguage(lang) {
+      const t = translations[lang];
+      menuItems.forEach(item => {
+  const link = item.querySelector("a");
+  if (link) link.textContent = t[item.dataset.key];
+});
+
+      document.getElementById("title").textContent = t.title;
+      document.getElementById("subtitle").textContent = t.subtitle;
+      document.getElementById("form-title").textContent = t.formTitle;
+      document.getElementById("name").placeholder = t.placeholders.name;
+      document.getElementById("phone").placeholder = t.placeholders.phone;
+      document.getElementById("company").placeholder = t.placeholders.company;
+      document.getElementById("submitBtn").textContent = t.submit;
+    }
+
+    langSelect.addEventListener("change", (e) => {
+      setLanguage(e.target.value);
+    });
+
+    // پیش‌فرض فارسی
+    setLanguage("tr");
+
+    // ارسال فرم با fetch
+    const form = document.getElementById("requestForm");
+    const formMessage = document.getElementById("formMessage");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const lang = langSelect.value;
+      const t = translations[lang];
+      const data = {
+        name: document.getElementById("name").value,
+        phone: document.getElementById("phone").value,
+        company: document.getElementById("company").value
+      };
+      try {
+        const res = await fetch("/submit-form.php", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+        if (res.ok) {
+          formMessage.textContent = t.success;
+          form.reset();
+        } else {
+          formMessage.textContent = t.error;
+        }
+      } catch (error) {
+        formMessage.textContent = t.error;
+      }
+    });
+  </script>
+  <script>
+document.getElementById('requestForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const formData = new FormData(this);
+  const messageDiv = document.getElementById('formMessage');
+  
+  try {
+    const response = await fetch('submit-form.php', {
+      method: 'POST',
+      body: formData
+    });
+    
+    const text = await response.text();
+    
+    if (text === 'success') {
+      messageDiv.textContent = 'درخواست شما با موفقیت ارسال شد!';
+      messageDiv.style.color = 'green';
+      this.reset(); // پاک کردن فرم
+    } else {
+      throw new Error('خطا در ارسال');
+    }
+  } catch (err) {
+    messageDiv.textContent = 'متاسفانه خطایی رخ داد. لطفاً دوباره تلاش کنید.';
+    messageDiv.style.color = 'red';
+  }
+});
+</script>
+
+
+
+
+
+</body>
+</html>
