@@ -26,19 +26,35 @@
     document.addEventListener('DOMContentLoaded', () => {
       const mobileMenuButton = document.getElementById('mobile-menu-button');
       const mobileMenu = document.getElementById('mobile-menu');
-      
+      const hamburger = mobileMenuButton?.querySelector('.hamburger');
+      const mobileLinks = mobileMenu?.querySelectorAll('a') || [];
+
+      if (!mobileMenuButton || !mobileMenu) return;
+
+      const setMenuState = (shouldOpen) => {
+        mobileMenu.classList.toggle('hidden', !shouldOpen);
+        hamburger?.classList.toggle('active', shouldOpen);
+        mobileMenuButton.setAttribute('aria-expanded', shouldOpen ? 'true' : 'false');
+        mobileMenu.setAttribute('aria-hidden', shouldOpen ? 'false' : 'true');
+      };
+
       mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        mobileMenuButton.querySelector('.hamburger').classList.toggle('active');
+        const shouldOpen = mobileMenu.classList.contains('hidden');
+        setMenuState(shouldOpen);
+      });
+
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => setMenuState(false));
       });
 
       // Close mobile menu on resize > 768px
       window.addEventListener('resize', () => {
-        if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
-          mobileMenu.classList.add('hidden');
-          mobileMenuButton.querySelector('.hamburger').classList.remove('active');
+        if (window.innerWidth >= 768) {
+          setMenuState(false);
         }
       });
+
+      setMenuState(false);
     });
   </script>
 </head>
@@ -47,25 +63,27 @@
   <header class="fixed w-full z-50 bg-gray-900/90 backdrop-blur-sm border-b border-gray-800">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <!-- Logo -->
-      <div class="flex items-center space-x-2 space-x-reverse">
-        <div class="bg-gradient-to-r from-cyan-500 to-blue-600 w-20 h-20 rounded-lg flex items-center justify-center">
-          <span class="text-white font-bold text-xl">AVADAN</span>
+      <div class="flex items-center gap-4">
+        <div class="bg-gradient-to-r from-cyan-500 to-blue-600 w-16 h-16 md:w-20 md:h-20 rounded-lg flex items-center justify-center">
+          <span class="text-white font-bold text-lg md:text-xl">AVADAN</span>
         </div>
-        <span class="text-white text-xl font-bold"></span>
+        <div class="hidden sm:block text-white">
+          <p class="text-sm uppercase tracking-widest text-cyan-300">AI & INDUSTRY 4.0</p>
+          <p class="text-lg md:text-xl font-bold">آوادان — QMINER</p>
+        </div>
+        <div class="logo-container hidden lg:block">
+          <div class="logo-flip">
+            <div class="logo-front">
+              <img src="img/logo1.jpg" class="logo" alt="AVADAN.CO">
+              <div class="logo-text"></div>
+            </div>
+            <div class="logo-back">
+              <img src="img/m3.jpg" class="logo" alt="AVADAN.CO">
+              <div class="logo-text"></div>
+            </div>
+          </div>
+        </div>
       </div>
-
-<div class="logo-container">
-    <div class="logo-flip">
-        <div class="logo-front">
-            <img src="img/logo1.jpg" class="logo" alt="AVADAN.CO ">
-            <div class="logo-text"></div>
-        </div>
-        <div class="logo-back">
-            <img src="img/m3.jpg" class="logo" alt="AVADAN.CO. ">
-            <div class="logo-text"></div>
-        </div>
-    </div>
-</div>
 
 
 
@@ -74,18 +92,26 @@
 
 
       <!-- Desktop Menu -->
-      <nav class="hidden md:flex space-x-8 space-x-reverse">
+      <nav class="hidden md:flex space-x-8 space-x-reverse" aria-label="منوی اصلی">
         <a href="#home" class="text-gray-300 hover:text-cyan-400 transition">خانه</a>
         <a href="#services" class="text-gray-300 hover:text-cyan-400 transition">خدمات</a>
         <a href="#about" class="text-gray-300 hover:text-cyan-400 transition">درباره ما</a>
+        <a href="#insights" class="text-gray-300 hover:text-cyan-400 transition">فرآیند ما</a>
         <a href="#activities" class="text-gray-300 hover:text-cyan-400 transition">فعالیت‌ها</a>
+        <a href="#faq" class="text-gray-300 hover:text-cyan-400 transition">سؤالات</a>
         <a href="#contact" class="text-gray-300 hover:text-cyan-400 transition">تماس</a>
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
-        <div class="hamburger">
-          <span>.</span>
+      <button
+        id="mobile-menu-button"
+        class="md:hidden text-white focus:outline-none"
+        aria-label="باز و بسته کردن منو"
+        aria-controls="mobile-menu"
+        aria-expanded="false"
+      >
+        <div class="hamburger" aria-hidden="true">
+          <span></span>
           <span></span>
           <span></span>
         </div>
@@ -93,15 +119,23 @@
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-gray-800 py-4 px-4 space-y-3">
+    <div
+      id="mobile-menu"
+      class="hidden md:hidden bg-gray-800 py-4 px-4 space-y-3"
+      aria-label="منوی موبایل"
+      aria-hidden="true"
+    >
       <a href="#home" class="block text-gray-300 hover:text-cyan-400">خانه</a>
       <a href="#services" class="block text-gray-300 hover:text-cyan-400">خدمات</a>
       <a href="#about" class="block text-gray-300 hover:text-cyan-400">درباره ما</a>
+      <a href="#insights" class="block text-gray-300 hover:text-cyan-400">فرآیند ما</a>
       <a href="#activities" class="block text-gray-300 hover:text-cyan-400">فعالیت‌ها</a>
+      <a href="#faq" class="block text-gray-300 hover:text-cyan-400">سؤالات</a>
       <a href="#contact" class="block text-gray-300 hover:text-cyan-400">تماس</a>
     </div>
   </header>
 
+  <main>
   <!-- Hero Section -->
   <section id="home" class="gradient-bg text-white pt-28 pb-20 px-4">
     <div class="container mx-auto max-w-6xl text-center">
@@ -120,6 +154,34 @@
         <a  href="form.html" class="bg-white/10 hover:bg-white/20 text-white font-bold py-3 px-8 rounded-lg backdrop-blur-sm transition">
           درخواست مشاوره
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Metrics -->
+  <section class="py-12 bg-white border-y border-gray-100" aria-label="شاخص‌های عملکرد آوادان">
+    <div class="container mx-auto px-4">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <article class="p-6 rounded-2xl shadow-sm border border-gray-100 bg-gradient-to-br from-white via-cyan-50 to-white">
+          <p class="text-4xl font-black text-gray-900 mb-2">۲۵+</p>
+          <p class="text-sm font-semibold text-cyan-600 tracking-widest uppercase">Years</p>
+          <p class="text-gray-600">سال سابقه در صنایع معدنی، شیمیایی و انرژی</p>
+        </article>
+        <article class="p-6 rounded-2xl shadow-sm border border-gray-100 bg-gradient-to-br from-white via-violet-50 to-white">
+          <p class="text-4xl font-black text-gray-900 mb-2">۴۰+</p>
+          <p class="text-sm font-semibold text-violet-600 tracking-widest uppercase">Projects</p>
+          <p class="text-gray-600">پروژه تکمیل‌شده تحلیل داده و پیاده‌سازی هوش مصنوعی</p>
+        </article>
+        <article class="p-6 rounded-2xl shadow-sm border border-gray-100 bg-gradient-to-br from-white via-emerald-50 to-white">
+          <p class="text-4xl font-black text-gray-900 mb-2">۹۸٪</p>
+          <p class="text-sm font-semibold text-emerald-600 tracking-widest uppercase">Satisfaction</p>
+          <p class="text-gray-600">رضایت مشتریان از نتایج بهینه‌سازی خطوط تولید</p>
+        </article>
+        <article class="p-6 rounded-2xl shadow-sm border border-gray-100 bg-gradient-to-br from-white via-amber-50 to-white">
+          <p class="text-4xl font-black text-gray-900 mb-2">۶</p>
+          <p class="text-sm font-semibold text-amber-600 tracking-widest uppercase">Industries</p>
+          <p class="text-gray-600">تنوع صنایع تحت پوشش: معدن، فولاد، شیمی، نفت و گاز، سیمان، آموزش</p>
+        </article>
       </div>
     </div>
   </section>
@@ -267,6 +329,51 @@
     </div>
   </section>
 
+  <!-- Intelligent Delivery Process -->
+  <section id="insights" class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-sm tracking-[0.3em] uppercase text-cyan-300 mb-3">Insight Pipeline</p>
+        <h2 class="text-3xl md:text-4xl font-bold">چگونه داده خام را به تصمیم هوشمند تبدیل می‌کنیم</h2>
+      </div>
+      <div class="grid gap-8 md:grid-cols-3">
+        <article class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur">
+          <div class="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center text-2xl font-bold mb-4">۱</div>
+          <h3 class="text-xl font-semibold mb-3">اکتشاف داده و یکپارچه‌سازی</h3>
+          <p class="text-gray-300 leading-relaxed">
+            اتصال به سنسورها، SCADA و یادداشت‌های کیفی؛ پاک‌سازی و برچسب‌گذاری داده‌ها در یک دریاچه داده امن.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-300">
+            <li>• Data Lake امن</li>
+            <li>• داشبورد سلامت داده</li>
+          </ul>
+        </article>
+        <article class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur">
+          <div class="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center text-2xl font-bold mb-4">۲</div>
+          <h3 class="text-xl font-semibold mb-3">ساخت مدل و شبیه‌سازی</h3>
+          <p class="text-gray-300 leading-relaxed">
+            طراحی مدل‌های یادگیری عمیق، شبیه‌سازی سناریوها و تنظیم هوشمند هیبریدی برای خطوط تولید متفاوت.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-300">
+            <li>• AutoML اختصاصی</li>
+            <li>• تست پشت خط تولید</li>
+          </ul>
+        </article>
+        <article class="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur">
+          <div class="w-12 h-12 rounded-full bg-emerald-500/30 flex items-center justify-center text-2xl font-bold mb-4">۳</div>
+          <h3 class="text-xl font-semibold mb-3">استقرار و همراهی مستمر</h3>
+          <p class="text-gray-300 leading-relaxed">
+            استقرار دستیار هوشمند روی موبایل، وب یا اتاق کنترل به‌همراه پایش ۲۴/۷ و تقویم به‌روزرسانی مدل.
+          </p>
+          <ul class="mt-4 space-y-2 text-sm text-gray-300">
+            <li>• KPI Studio زنده</li>
+            <li>• آپدیت دوره‌ای مدل</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
   <!-- Activities & Team -->
   <section id="activities" class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
@@ -348,6 +455,46 @@
     </div>
   </section>
 
+  <!-- FAQ Section -->
+  <section id="faq" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <div class="text-center mb-12">
+        <p class="text-sm tracking-[0.3em] uppercase text-cyan-500 mb-3">FAQ</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900">سؤالات پرتکرار مشتریان</h2>
+        <p class="text-gray-600 mt-4">با خیال راحت تصمیم بگیرید؛ جزئیات فنی و عملیاتی را شفاف توضیح داده‌ایم.</p>
+      </div>
+      <div class="space-y-4">
+        <details class="bg-white border border-gray-200 rounded-2xl p-5 group" open>
+          <summary class="cursor-pointer flex items-center justify-between font-semibold text-gray-900">
+            شروع یک پروژه چقدر زمان می‌برد؟
+            <span class="text-cyan-500 transition-transform group-open:rotate-45"><i class="fas fa-plus"></i></span>
+          </summary>
+          <p class="text-gray-600 mt-3 leading-relaxed">
+            پس از دریافت داده‌ها و اسناد، طی ۲ تا ۴ هفته گزارش اکتشافی و نقشه راه استقرار را ارائه می‌دهیم. اجرای فاز MVP حدود ۶ تا ۸ هفته طول می‌کشد.
+          </p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-2xl p-5 group">
+          <summary class="cursor-pointer flex items-center justify-between font-semibold text-gray-900">
+            آیا بدون داده‌های کامل می‌توان پروژه را آغاز کرد؟
+            <span class="text-cyan-500 transition-transform group-open:rotate-45"><i class="fas fa-plus"></i></span>
+          </summary>
+          <p class="text-gray-600 mt-3 leading-relaxed">
+            بله. تیم ما با طراحی سنسور اپتیکی، ابزارک یادداشت اپراتور و لایه هوشمند جمع‌آوری داده، ابتدا داده قابل اتکا ایجاد می‌کند و سپس مدل را آموزش می‌دهد.
+          </p>
+        </details>
+        <details class="bg-white border border-gray-200 rounded-2xl p-5 group">
+          <summary class="cursor-pointer flex items-center justify-between font-semibold text-gray-900">
+            امنیت داده‌ها چگونه تضمین می‌شود؟
+            <span class="text-cyan-500 transition-transform group-open:rotate-45"><i class="fas fa-plus"></i></span>
+          </summary>
+          <p class="text-gray-600 mt-3 leading-relaxed">
+            داده‌ها روی سرور اختصاصی داخل کشور یا زیرساخت مشتری نگهداری می‌شوند، رمزنگاری در حال انتقال و در Rest اعمال شده و قرارداد محرمانگی (NDA) امضا می‌گردد.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact" class="py-16 bg-white">
     <div class="container mx-auto px-4">
@@ -396,10 +543,11 @@
               </li>
               <li class="flex items-start">
                 <i class="fas fa-phone-alt text-xl ml-3 mt-1"></i>
-                <span> پس از ارسال فرم تماس می‌گیریم</span>
-                 </li>
+                <span>پس از ارسال فرم تماس می‌گیریم</span>
+              </li>
               <li class="flex items-start">
-                 <span>📞09123411691</span>
+                <i class="fas fa-mobile-screen-button text-xl ml-3 mt-1"></i>
+                <span>۰۹۱۲۳۴۱۱۶۹۱ (پشتیبانی مستقیم)</span>
               </li>
               <li class="flex items-start">
                 <i class="fas fa-envelope text-xl ml-3 mt-1"></i>
@@ -408,15 +556,11 @@
             </ul>
           </div>
 
-          <div class="mt-8">
-           
-            
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
+  </main>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-gray-400 py-10">
@@ -443,20 +587,23 @@
 
   <!-- Chat Bot Widget -->
   <div class="chatbot-container">
-    <button class="chatbot-button" id="chatbot-toggle" aria-label="باز کردن چت" >
-      <span>
-      <!--img src="img/logo1.jpg" class="chatbot-logo" alt="AVADAN.CO "-->
-      </span>
-      <i class="fas fa-comments"> ؟؟</i>
-      <span class="notification-badge" id="chatbot-notification" style="display:block">1</span>
+    <button
+      class="chatbot-button"
+      id="chatbot-toggle"
+      aria-label="باز کردن چت"
+      aria-expanded="false"
+    >
+      <span class="sr-only">نمایش گفت‌وگو با تیم پشتیبانی</span>
+      <i class="fas fa-comments" aria-hidden="true"></i>
+      <span class="notification-badge" id="chatbot-notification">1</span>
     </button>
     
     <div class="chatbot-window" id="chatbot-window">
       <div class="chatbot-header">
         <div class="chatbot-header-info">
-          <div class="1chatbot-avatar">
-            <img    w=20 h=20 src="img/logo1.jpg" class="chatbot-logo" alt="logo "> 
-            <i class="fas fa-robot"></i>
+          <div class="chatbot-avatar">
+            <img width="32" height="32" src="img/logo1.jpg" class="chatbot-logo" alt="لوگوی آوادان"> 
+            <i class="fas fa-robot" aria-hidden="true"></i>
           </div>
           <div class="chatbot-header-text">
             <h3>پشتیبانی آوادان</h3>
@@ -497,8 +644,22 @@
   <script>
     document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      const name = document.getElementById('name').value;
-      alert(`✅ درخواست شما با موفقیت ثبت شد، جناب/سرکار ${name}!\n\nدر اسرع وقت با شما تماس خواهیم گرفت.`);
+      const name = document.getElementById('name').value.trim();
+      const emailOrPhone = document.getElementById('email').value.trim();
+      const company = document.getElementById('company').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const subject = encodeURIComponent('درخواست مشاوره جدید از وب‌سایت آوادان');
+      const body = encodeURIComponent(
+        `نام: ${name || '---'}\n` +
+        `ایمیل/تلفن: ${emailOrPhone || '---'}\n` +
+        `سازمان: ${company || '---'}\n` +
+        `پیام:\n${message || '---'}`
+      );
+
+      window.location.href = `mailto:asadipour.e@gmail.com?subject=${subject}&body=${body}`;
+
+      alert(`✅ درخواست شما با موفقیت ثبت شد، ${name || 'کاربر گرامی'}!\n\nایمیل شامل جزئیات به asadipour.e@gmail.com ارسال شد.`);
       this.reset();
     });
   </script>
