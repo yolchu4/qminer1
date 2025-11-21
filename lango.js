@@ -108,6 +108,19 @@
         'contact.form.emailBody': 'نام: {name}\nایمیل/تلفن: {contact}\nسازمان: {company}\nپیام:\n{message}',
         'contact.form.successMessage': '✅ درخواست شما با موفقیت ثبت شد، {name}!\n\nایمیل شامل جزئیات به asadipour.e@gmail.com ارسال شد.',
         'contact.form.defaultName': 'کاربر گرامی',
+        'chatbot.welcome': 'سلام! 👋\n\nبه پشتیبانی شرکت آوادان خوش آمدید. من اینجا هستم تا به سوالات شما درباره خدمات هوش مصنوعی، دوره‌های آموزشی و محصولات ما پاسخ دهم.\n\nچطور می‌توانم کمکتان کنم؟',
+        'chatbot.quickReplies.services': 'خدمات آوادان',
+        'chatbot.quickReplies.courses': 'دوره‌های آموزشی',
+        'chatbot.quickReplies.pricing': 'برآورد هزینه',
+        'chatbot.quickReplies.contact': 'راه‌های تماس',
+        'chatbot.responses.greeting': 'سلام! خوش آمدید. چطور می‌توانم کمکتان کنم؟',
+        'chatbot.responses.services': 'شرکت آوادان خدمات زیر را ارائه می‌دهد:\n\n🤖 مدل دستیار هوش مصنوعی\n📚 دوره‌های آموزشی تخصصی\n🔬 سنسور اپتیکی هوشمند\n🏭 دستگاه تست مقاومت مواد\n💻 نرم‌افزار استخراج فاز لیزری\n\nبرای اطلاعات بیشتر می‌توانید بخش خدمات را ببینید یا فرم تماس را پر کنید.',
+        'chatbot.responses.courses': 'ما دوره‌های تخصصی در زمینه‌های زیر برگزار می‌کنیم:\n\n• یادگیری عمیق و شبکه‌های عصبی\n• کنترل هوشمند فرآیندهای صنعتی\n• کاربردهای عملی هوش مصنوعی در صنعت\n\nبرای ثبت‌نام کافی است فرم تماس را ارسال کنید.',
+        'chatbot.responses.pricing': 'قیمت خدمات بر اساس نیاز دقیق هر پروژه تعیین می‌شود. برای دریافت پیش‌فاکتور:\n\n1️⃣ فرم تماس سایت را تکمیل کنید\n2️⃣ یا ایمیل info@avadan-co.ir را ارسال کنید\n\nکارشناسان ما به‌سرعت با شما تماس می‌گیرند.',
+        'chatbot.responses.contact': 'راه‌های ارتباط با ما:\n\n📧 ایمیل: info@avadan-co.ir\n📍 آدرس: زنجان، دانشگاه تحصیلات تکمیلی علوم پایه\n📱 پشتیبانی: ۰۹۱۲۳۴۱۱۶۹۱\n📝 فرم تماس: بخش تماس در همین صفحه',
+        'chatbot.responses.about': 'شرکت علم و صنعت معدن آوادان پیشرو در خدمات هوش مصنوعی صنعتی است.\n\n✅ ۲۵ سال سابقه در صنایع معدنی و شیمیایی\n✅ ۲۰ سال تجربه نرم‌افزارهای تخصصی\n✅ ۷ سال تحقیق و توسعه در یادگیری عمیق\n\nتیم ما متشکل از نخبگان دانشگاهی کشور است.',
+        'chatbot.responses.ai': 'مدل دستیار هوش مصنوعی ما:\n\n🤖 پارامترهای بهینه خط تولید را پیشنهاد می‌دهد\n📊 بر اساس داده‌های تاریخی و یادگیری عمیق کار می‌کند\n📱 روی موبایل، وب یا اتاق کنترل قابل دسترس است\n\nدمو: avadan-co.ir/qminer3/',
+        'chatbot.responses.default': 'از پیام شما سپاسگزاریم. برای دریافت جزئیات درباره خدمات، دوره‌ها یا قیمت‌ها، فرم تماس را تکمیل کنید یا به info@avadan-co.ir ایمیل بزنید. تیم ما آماده پاسخگویی است. 😊',
         'footer.rights': '&copy; 1404 شرکت علم و صنعت معدن آوادان. کلیه حقوق محفوظ است.',
         'chatbot.toggleLabel': 'باز کردن چت',
         'chatbot.toggleSr': 'نمایش گفت‌وگو با تیم پشتیبانی',
@@ -226,6 +239,19 @@
         'contact.form.emailBody': 'Name: {name}\nEmail/Phone: {contact}\nCompany: {company}\nMessage:\n{message}',
         'contact.form.successMessage': '✅ Thank you {name}! An email has been prepared for asadipour.e@gmail.com.',
         'contact.form.defaultName': 'valued partner',
+        'chatbot.welcome': 'Hi! 👋\n\nWelcome to AVADAN support. I can help you with our AI services, training tracks and smart products.\n\nHow may I assist you today?',
+        'chatbot.quickReplies.services': 'Our services',
+        'chatbot.quickReplies.courses': 'Training tracks',
+        'chatbot.quickReplies.pricing': 'Pricing',
+        'chatbot.quickReplies.contact': 'Contact info',
+        'chatbot.responses.greeting': 'Hello! Great to have you here. How can I help?',
+        'chatbot.responses.services': 'AVADAN provides:\n\n🤖 Custom AI copilot model\n📚 Industrial AI training programs\n🔬 Intelligent optical sensor\n🏭 Material strength tester\n💻 Laser phase extraction software\n\nCheck the Services section or send the contact form for more details.',
+        'chatbot.responses.courses': 'We run specialized programs covering:\n\n• Deep learning & neural networks\n• Smart control of industrial processes\n• Practical AI deployment in production lines\n\nSend the contact form to receive the syllabus and schedule.',
+        'chatbot.responses.pricing': 'Pricing is tailored to each project. To receive a detailed quotation:\n\n1️⃣ Submit the contact form\n2️⃣ Or email info@avadan-co.ir\n\nOur consultants will follow up shortly.',
+        'chatbot.responses.contact': 'Ways to reach us:\n\n📧 Email: info@avadan-co.ir\n📍 Address: IASBS campus, Zanjan, Iran\n📱 Direct support: +98 912 341 1691\n📝 Contact form: available at the bottom of this page',
+        'chatbot.responses.about': 'AVADAN is a pioneer in industrial AI services.\n\n✅ 25+ years across mining & chemical plants\n✅ 20+ years of engineering software delivery\n✅ 7+ years of deep-learning R&D\n\nOur team unites PhD talent from leading universities.',
+        'chatbot.responses.ai': 'Our AI assistant model:\n\n🤖 Suggests optimal process parameters in real time\n📊 Learns from your historical laboratory and QC data\n📱 Runs on mobile, web or directly in the control room\n\nDemo: avadan-co.ir/qminer3/',
+        'chatbot.responses.default': 'Thanks for reaching out! For precise details on services, training or pricing, please submit the contact form or email info@avadan-co.ir. Our team will reply quickly. 😊',
         'footer.rights': '&copy; 2025 AVADAN Industrial AI. All rights reserved.',
         'chatbot.toggleLabel': 'Open chat',
         'chatbot.toggleSr': 'Open live chat with support',
@@ -344,6 +370,19 @@
         'contact.form.emailBody': 'Ad: {name}\nE-posta/Tel: {contact}\nKurum: {company}\nMesaj:\n{message}',
         'contact.form.successMessage': '✅ Teşekkürler {name}! asadipour.e@gmail.com adresine e-posta hazırlandı.',
         'contact.form.defaultName': 'değerli iş ortağımız',
+        'chatbot.welcome': 'Merhaba! 👋\n\nAVADAN destek hattına hoş geldiniz. Yapay zekâ hizmetlerimiz, eğitimlerimiz ve ürünlerimiz hakkında yardımcı olabilirim.\n\nSize nasıl destek olabilirim?',
+        'chatbot.quickReplies.services': 'Hizmetler',
+        'chatbot.quickReplies.courses': 'Eğitimler',
+        'chatbot.quickReplies.pricing': 'Fiyatlandırma',
+        'chatbot.quickReplies.contact': 'İletişim bilgisi',
+        'chatbot.responses.greeting': 'Merhaba! Hoş geldiniz, nasıl yardımcı olabilirim?',
+        'chatbot.responses.services': 'AVADAN şu çözümleri sunar:\n\n🤖 Özel AI asistan modeli\n📚 Endüstriyel yapay zekâ eğitimleri\n🔬 Akıllı optik sensör\n🏭 Malzeme dayanım test cihazı\n💻 Lazer faz çıkarım yazılımı\n\nDetaylar için Hizmetler bölümüne bakabilir veya formu doldurabilirsiniz.',
+        'chatbot.responses.courses': 'Eğitim başlıklarımız:\n\n• Derin öğrenme ve sinir ağları\n• Endüstriyel süreçlerin akıllı kontrolü\n• Üretim hatlarında yapay zekâ uygulamaları\n\nProgram takvimini almak için iletişim formunu gönderin.',
+        'chatbot.responses.pricing': 'Ücretlendirme proje ihtiyaçlarına göre yapılır. Teklif almak için:\n\n1️⃣ İletişim formunu doldurun\n2️⃣ Veya info@avadan-co.ir adresine yazın\n\nDanışmanlarımız kısa sürede dönüş yapacaktır.',
+        'chatbot.responses.contact': 'Bize ulaşmanın yolları:\n\n📧 E-posta: info@avadan-co.ir\n📍 Adres: IASBS kampüsü, Zencan\n📱 Doğrudan destek: +98 912 341 1691\n📝 İletişim formu: sayfanın alt bölümünde',
+        'chatbot.responses.about': 'AVADAN, endüstriyel yapay zekâ hizmetlerinde öncü bir kuruluştur.\n\n✅ Madencilik ve kimya projelerinde 25+ yıl\n✅ Mühendislik yazılımlarında 20+ yıl\n✅ Derin öğrenme Ar-Ge’sinde 7+ yıl\n\nEkibimiz seçkin üniversite mezunlarından oluşur.',
+        'chatbot.responses.ai': 'Yapay zekâ asistan modelimiz:\n\n🤖 Üretim parametreleri için en iyi değerleri önerir\n📊 Tarihsel veri ve derin öğrenmeden beslenir\n📱 Mobil, web veya kontrol odasında çalışır\n\nDemo: avadan-co.ir/qminer3/',
+        'chatbot.responses.default': 'Mesajınız için teşekkürler. Hizmetlerimiz, eğitimlerimiz veya fiyatlandırma hakkında ayrıntılı bilgi almak isterseniz iletişim formunu doldurun ya da info@avadan-co.ir adresine yazın. Ekibimiz kısa sürede dönecektir. 😊',
         'footer.rights': '&copy; 2025 AVADAN Endüstriyel Yapay Zekâ. Tüm hakları saklıdır.',
         'chatbot.toggleLabel': 'Sohbeti aç',
         'chatbot.toggleSr': 'Destek sohbetini aç',
@@ -357,15 +396,21 @@
       }
     };
 
+    window.translations = translations;
+
     const getTranslation = (lang, key) => translations[lang]?.[key] ?? translations.fa[key] ?? '';
+    window.getTranslation = getTranslation;
 
     const formatString = (template, variables = {}) =>
       template.replace(/\{(\w+)\}/g, (_, key) => (variables[key] ?? ''));
+    window.formatString = formatString;
 
     let currentLanguage = localStorage.getItem('siteLang') || 'fa';
+    window.currentLanguage = currentLanguage;
 
     const applyTranslations = (lang) => {
       currentLanguage = translations[lang] ? lang : 'fa';
+      window.currentLanguage = currentLanguage;
       localStorage.setItem('siteLang', currentLanguage);
       const dir = directionMap[currentLanguage] || 'rtl';
       document.documentElement.lang = currentLanguage;
@@ -402,7 +447,12 @@
         btn.classList.toggle('text-white', isActive);
         btn.classList.toggle('text-white/70', !isActive);
       });
+
+      document.dispatchEvent(new CustomEvent('languagechange', {
+        detail: { lang: currentLanguage }
+      }));
     };
+    window.applyTranslations = applyTranslations;
 
     document.addEventListener('DOMContentLoaded', () => {
       const mobileMenuButton = document.getElementById('mobile-menu-button');
