@@ -421,4 +421,12 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
-  
+/* فقط آیکن داخل دکمه‌های زبان تورکواز شود */
+/*.lang-btn .lang-icon {
+    color: #40E0D0;
+}
+
+  nav [data-lang-switch] .lang-icon {
+    color: #40E0D0 !important;
+}
+*/

@@ -1,5 +1,6 @@
 
     const directionMap = { fa: 'rtl', tr: 'ltr', en: 'ltr' };
+    const languageOrder = ['fa', 'tr', 'en'];
     const translations = {
       fa: {
         'nav.home': 'خانه',
@@ -443,10 +444,18 @@
 
       document.querySelectorAll('[data-lang-switch]').forEach(btn => {
         const isActive = btn.dataset.langSwitch === currentLanguage;
-        btn.classList.toggle('bg-white/30', isActive);
+        btn.classList.toggle('bg-cyan-500', isActive);
         btn.classList.toggle('text-white', isActive);
-        btn.classList.toggle('text-white/70', !isActive);
+        btn.classList.toggle('shadow-lg', isActive);
+        btn.classList.toggle('bg-cyan-500/10', !isActive);
+        btn.classList.toggle('text-white/80', !isActive);
+        btn.classList.toggle('shadow-inner', !isActive);
       });
+
+      const mobileCycleBtn = document.getElementById('mobile-lang-cycle');
+      if (mobileCycleBtn) {
+        mobileCycleBtn.textContent = currentLanguage.toUpperCase();
+      }
 
       document.dispatchEvent(new CustomEvent('languagechange', {
         detail: { lang: currentLanguage }
@@ -490,6 +499,15 @@
       document.querySelectorAll('[data-lang-switch]').forEach(btn => {
         btn.addEventListener('click', () => applyTranslations(btn.dataset.langSwitch));
       });
+
+      const mobileLangCycle = document.getElementById('mobile-lang-cycle');
+      if (mobileLangCycle) {
+        mobileLangCycle.addEventListener('click', () => {
+          const index = languageOrder.indexOf(currentLanguage);
+          const nextLang = languageOrder[(index + 1) % languageOrder.length];
+          applyTranslations(nextLang);
+        });
+      }
 
       applyTranslations(currentLanguage);
 
